@@ -1,0 +1,43 @@
+.row {
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+  margin: 15px auto;
+}
+
+.card-container {
+  position: relative;
+  width: 110px;
+  height: 150px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+
+.front-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: lightGrey;
+  backface-visibility: hidden;
+}
+
+.back-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: lightBlue;
+  text-align: center;
+  font-size: 25px;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
