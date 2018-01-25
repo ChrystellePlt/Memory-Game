@@ -1,14 +1,18 @@
-.row {
-  width: 35%;
-  display: flex;
-  justify-content: space-between;
-  margin: 15px auto;
+.main-container {
+  width: 60vw;
+  display: grid;
+  /* grid-gap: 20px; */
+  grid-template-columns: repeat(4, 150px);
+  grid-template-rows: repeat(4, 200px);
+  justify-content: center;
+  margin: auto;
 }
 
 .card-container {
   position: relative;
   width: 110px;
   height: 150px;
+  margin: auto;
 }
 
 .card {
@@ -40,4 +44,45 @@
 
 .flipped {
   transform: rotateY(180deg);
+}
+
+.win {
+  transform: scale(1.05) rotateY(180deg);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: #000;
+  opacity: 0.5;
+  display: none;
+}
+
+.winner-text {
+  color: #fff;
+  text-align: center;
+  padding-top: 30%;
+  font-family: arial;
+  font-size: 30px;
+}
+[data-category="yellow"] {
+  background-color: yellow;
+}
+[data-category="blue"] {
+  background-color: blue;
+}
+[data-category="red"] {
+  background-color: red;
+}
+[data-category="green"] {
+  background-color: green;
+}
+[data-category="black"] {
+  background-color: black;
+}
+[data-category="orange"] {
+  background-color: orange;
 }
