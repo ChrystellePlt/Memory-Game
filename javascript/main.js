@@ -1,11 +1,5 @@
-//var hide = function(self, prev) {       //function declaration
-//  setTimeout(function() {
-//    self.classList.remove('flipped');
-//    prev.classList.remove('flipped');
-//  }, 500);
-//}
 
-// CARDS CREATION ----------------------------------------------------------------------
+// CARDS CREATION AND RANDOM DISTRIBUTION----------------------------------------------------------------------
 var mainContainer = document.querySelector('.main-container')
 var categories = ['yellow', 'blue', 'red', 'green', 'black', 'orange']
 var numberOfCards = 12;
@@ -49,6 +43,13 @@ function cardCreation(index) {
   card.appendChild(backFace)
 }
 // GAME ----------------------------------------------------------------------
+
+//var hide = function(self, prev) {       //function declaration
+//  setTimeout(function() {
+//    self.classList.remove('flipped');
+//    prev.classList.remove('flipped');
+//  }, 500);
+//}
 
 const card = document.querySelectorAll('.card');
 var count = 0;
@@ -95,37 +96,3 @@ for (var i = 0; i < card.length; i++) {
 
   })
 };
-
-// NOTES ----------------------------------------------------------------------
-
-/////////////////////LE CODE DE VINCENT :'(
-//tab : tableau à 12 éléments contenant les chiffres de 1 à 6 en 2 exemplaires
-// var tab=[];
-// var tabCounter=[];
-// for (var i = 0; i < 6; i++) {
-//    tabCounter[i]=0;
-// }
-// while (tab.length<12) {
-//    var intRandom=Math.floor(Math.random() * 6);
-//    if (tabCounter[intRandom]<2) {
-//       tab.push(intRandom);
-//       tabCounter[intRandom]+=1;
-//
-//    }
-// }
-
-/*.bind explanation :
-
-  var add = function(a, b) {
-    return a + b;
-  }
-
-  add(5, 7);
-
-  var add5 = add.bind(null, 5);
-
-  var add5 = function(b) {
-    return add(5, b);
-  }
-
-  add5(7);*/
